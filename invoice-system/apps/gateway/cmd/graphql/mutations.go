@@ -2,7 +2,7 @@ package customgraph
 
 import (
 	"fmt"
-	"github.com/arfis/go-invoice/gateway/cmd/invoice"
+	"github.com/arfis/go-invoice/gateway/internal/services/invoice"
 	"github.com/arfis/go-invoice/gateway/pkg/model"
 	"github.com/google/uuid"
 	"github.com/graphql-go/graphql"

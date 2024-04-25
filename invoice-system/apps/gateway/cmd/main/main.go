@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/arfis/go-invoice/gateway/cmd/invoice"
 	"github.com/arfis/go-invoice/gateway/cmd/server"
+	messageQueue "github.com/arfis/go-invoice/gateway/internal/message"
+	"github.com/arfis/go-invoice/gateway/internal/services/invoice"
 )
 
 // this is still nil
@@ -35,6 +36,9 @@ func main() {
 
 	go Startup(&graphQlServer, 8081)
 	go Startup(&restApiServer, 8080)
+
+	messageQueue.StartProducing()
+	messageQueue.StartListening()
 
 	for i := 0; i < 2; i++ {
 		<-terminateChan
