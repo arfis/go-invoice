@@ -1,0 +1,274 @@
+{
+  "version": "6.0",
+  "nxVersion": "18.3.3",
+  "deps": {
+    "nx": "18.3.3"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".idea/misc.xml",
+        "hash": "14083443867365438903"
+      },
+      {
+        "file": "invoice-system/apps/gateway/pkg/model/invoice.go",
+        "hash": "13686721382564593423"
+      },
+      {
+        "file": "invoice-system/apps/gateway/cmd/graphql/queries.go",
+        "hash": "11643585562209109432"
+      },
+      {
+        "file": "invoice-system/apps/authorization/.idea/authorization.iml",
+        "hash": "434243588760791474"
+      },
+      {
+        "file": "invoice-system/scripts/stop_docker.sh",
+        "hash": "14758573452978508573"
+      },
+      {
+        "file": "invoice-system/apps/gateway/cmd/server/index.html",
+        "hash": "15741203956936509589"
+      },
+      {
+        "file": "invoice-system/go.work.sum",
+        "hash": "4788580758237128527"
+      },
+      {
+        "file": "invoice-system/apps/gateway/cmd/invoice/invoice.go",
+        "hash": "11081198844703182962"
+      },
+      {
+        "file": "invoice-system/apps/gateway/.idea/modules.xml",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "invoice-system/apps/gateway/.idea/misc.xml",
+        "hash": "14083443867365438903"
+      },
+      {
+        "file": "invoice-system/apps/gateway/cmd/wrapper/handler-wrapper.go",
+        "hash": "18376630922814139608"
+      },
+      {
+        "file": "invoice-system/apps/invoice/internal/service/resource.go",
+        "hash": "8351329448840295535"
+      },
+      {
+        "file": "invoice-system/apps/authorization/Dockerfile",
+        "hash": "10127479661927469485"
+      },
+      {
+        "file": "invoice-system/apps/invoice/script/wait-for-it.sh",
+        "hash": "12471672784381495050"
+      },
+      {
+        "file": "invoice-system/apps/gateway/cmd/main/main.go",
+        "hash": "17136468034204649765"
+      },
+      {
+        "file": "invoice-system/initdb/init-uuid-extension.sql",
+        "hash": "6664341203915008019"
+      },
+      {
+        "file": "invoice-system/docker-compose.yml",
+        "hash": "7009754283032970130"
+      },
+      {
+        "file": "invoice-system/scripts/start_docker.sh",
+        "hash": "14973608844603156073"
+      },
+      {
+        "file": "invoice-system/apps/authorization/go.mod",
+        "hash": "1863899975169462823"
+      },
+      {
+        "file": "invoice-system/apps/invoice/Dockerfile",
+        "hash": "2222320703656807800"
+      },
+      {
+        "file": "invoice-system/apps/authorization/.idea/.gitignore",
+        "hash": "1854809204326199962"
+      },
+      {
+        "file": "invoice-system/apps/gateway/cmd/invoice/company.go",
+        "hash": "12922611287262545614"
+      },
+      {
+        "file": "invoice-system/apps/gateway/go.mod",
+        "hash": "8087704508178117516"
+      },
+      {
+        "file": "invoice-system/apps/invoice/config/air.toml",
+        "hash": "12911969143763826063"
+      },
+      {
+        "file": ".idea/dataSources.xml",
+        "hash": "8555685108730261264"
+      },
+      {
+        "file": "invoice-system/.editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": "invoice-system/apps/authorization/.idea/misc.xml",
+        "hash": "14083443867365438903"
+      },
+      {
+        "file": "invoice-system/go.work",
+        "hash": "10228608208053967589"
+      },
+      {
+        "file": "invoice-system/apps/invoice/pkg/config/config.go",
+        "hash": "4748054636332752256"
+      },
+      {
+        "file": "invoice-system/apps/gateway/internal/util/util.go",
+        "hash": "13498769904550638498"
+      },
+      {
+        "file": "invoice-system/.vscode/extensions.json",
+        "hash": "3833545590435012078"
+      },
+      {
+        "file": ".idea/.gitignore",
+        "hash": "1854809204326199962"
+      },
+      {
+        "file": "invoice-system/apps/authorization/pkg/db/database.go",
+        "hash": "2267783293176561558"
+      },
+      {
+        "file": "invoice-system/apps/gateway/Dockerfile",
+        "hash": "4495727757546590726"
+      },
+      {
+        "file": "invoice-system/apps/gateway/cmd/graphql/types.go",
+        "hash": "13331407626168646344"
+      },
+      {
+        "file": "invoice-system/apps/gateway/cmd/server/server.go",
+        "hash": "5017986822307258304"
+      },
+      {
+        "file": "invoice-system/apps/invoice/go.sum",
+        "hash": "13334065649737504582"
+      },
+      {
+        "file": "invoice-system/apps/gateway/cmd/server/graphql.go",
+        "hash": "5602056612103561411"
+      },
+      {
+        "file": ".idea/vcs.xml",
+        "hash": "14721619479974801327"
+      },
+      {
+        "file": "invoice-system/apps/gateway/.idea/gateway.iml",
+        "hash": "265962674149989289"
+      },
+      {
+        "file": ".idea/modules.xml",
+        "hash": "10689533473734128506"
+      },
+      {
+        "file": "invoice-system/apps/gateway/cmd/server/rest-api.go",
+        "hash": "11577098420340548889"
+      },
+      {
+        "file": "invoice-system/apps/gateway/go.sum",
+        "hash": "13511754365203231761"
+      },
+      {
+        "file": "invoice-system/apps/authorization/cmd/main/main.go",
+        "hash": "10637358391172503906"
+      },
+      {
+        "file": ".nx/nxw.js",
+        "hash": "11254603345854076312"
+      },
+      {
+        "file": "invoice-system/.gitignore",
+        "hash": "16877376182141465221"
+      },
+      {
+        "file": "invoice-system/apps/authorization/go.sum",
+        "hash": "16249504528000906452"
+      },
+      {
+        "file": "invoice-system/apps/invoice/cmd/main/main.go",
+        "hash": "11013820911796193040"
+      },
+      {
+        "file": "invoice-system/apps/authorization/config/air.toml",
+        "hash": "5490226451382929952"
+      },
+      {
+        "file": "invoice-system/apps/gateway/.idea/workspace.xml",
+        "hash": "2648490075458197356"
+      },
+      {
+        "file": "invoice-system/apps/invoice/internal/api/company_controller.go",
+        "hash": "671609441113049980"
+      },
+      {
+        "file": "invoice-system/.github/workflows/ci.yml",
+        "hash": "5985566482940910192"
+      },
+      {
+        "file": "invoice-system/apps/invoice/internal/model/invoice_model.go",
+        "hash": "8991750754249857744"
+      },
+      {
+        "file": "invoice-system/apps/gateway/config/air.toml",
+        "hash": "16406589954408723395"
+      },
+      {
+        "file": "invoice-system/scripts/wait-for-it.sh",
+        "hash": "12471672784381495050"
+      },
+      {
+        "file": "invoice-system/apps/authorization/.idea/modules.xml",
+        "hash": "15261973612768064130"
+      },
+      {
+        "file": ".idea/go-invoice.iml",
+        "hash": "434243588760791474"
+      },
+      {
+        "file": "invoice-system/apps/gateway/.idea/.gitignore",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "invoice-system/apps/gateway/cmd/graphql/mutations.go",
+        "hash": "5579728242125865529"
+      },
+      {
+        "file": "invoice-system/apps/invoice/go.mod",
+        "hash": "9721790068453415839"
+      },
+      {
+        "file": "invoice-system/apps/gateway/internal/util/util2.go",
+        "hash": "138946583118367016"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "2110945332964774953"
+      },
+      {
+        "file": "invoice-system/apps/authorization/pkg/model/user.go",
+        "hash": "14607698640769413279"
+      },
+      {
+        "file": "invoice-system/apps/invoice/internal/db/database.go",
+        "hash": "4123186290867295695"
+      },
+      {
+        "file": "invoice-system/apps/invoice/internal/api/invoice_controller.go",
+        "hash": "16111468283713967589"
+      }
+    ],
+    "projectFileMap": {}
+  }
+}
