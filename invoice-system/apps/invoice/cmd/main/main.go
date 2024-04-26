@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/arfis/go-invoice/invoice/internal/api"
 	db2 "github.com/arfis/go-invoice/invoice/internal/db"
+	messageQueue "github.com/arfis/go-invoice/invoice/internal/message"
 	"github.com/arfis/go-invoice/invoice/internal/service"
 	"net/http"
 )
@@ -25,6 +26,8 @@ func main() {
 	service.AutoMigrate()
 	invoiceController.RegisterRoutes(mux)
 	companyController.RegisterRoutes(mux)
+	messageQueue.StartListening()
+
 	fmt.Println("Invoice Server starting on port 8080...")
 	err := http.ListenAndServe("0.0.0.0:8080", mux) // This will block and keep the program running
 	if err != nil {

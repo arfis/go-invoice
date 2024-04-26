@@ -1,9 +1,9 @@
 package invoice
 
 import (
-	"bytes"
 	"encoding/json"
 	"fmt"
+	"github.com/arfis/go-invoice/gateway/internal/util"
 	"github.com/arfis/go-invoice/gateway/pkg/model"
 	"github.com/google/uuid"
 	"io"
@@ -43,17 +43,10 @@ func (invoiceService *InvoiceService) Create(resourceType string, input interfac
 		log.Fatal("INVOICE_SERVICE_URL not set")
 	}
 
-	// Marshal input data to JSON
-	jsonData, err := json.Marshal(input)
-	if err != nil {
-		log.Printf("Error marshalling input to JSON: %v", err)
-		return nil, err
+	bodyBuffer, bufferError := util.ConvertStructToBuffer(input)
+	if bufferError != nil {
+		return nil, bufferError
 	}
-	log.Printf("Sending JSON data: %s", jsonData)
-
-	// Create request body
-	bodyBuffer := bytes.NewBuffer(jsonData)
-
 	// Create HTTP client
 	client := &http.Client{}
 

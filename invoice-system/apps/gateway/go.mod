@@ -9,3 +9,5 @@ require (
 )
 
 require github.com/confluentinc/confluent-kafka-go/v2 v2.3.0
+
+require github.com/gorilla/mux v1.8.1

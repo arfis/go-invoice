@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"github.com/arfis/go-invoice/gateway/cmd/server"
-	messageQueue "github.com/arfis/go-invoice/gateway/internal/message"
 	"github.com/arfis/go-invoice/gateway/internal/services/invoice"
 )
 
@@ -31,14 +30,14 @@ func main() {
 	//var tf util.TestingFunc
 
 	//tf("123", 3)
+	//var producer = messageQueue.GetProducerInstance()
 	var graphQlServer = server.GraphQLServer{}
 	var restApiServer = server.RestApiServer{}
 
 	go Startup(&graphQlServer, 8081)
 	go Startup(&restApiServer, 8080)
 
-	messageQueue.StartProducing()
-	messageQueue.StartListening()
+	//messageQueue.StartListening()
 
 	for i := 0; i < 2; i++ {
 		<-terminateChan
