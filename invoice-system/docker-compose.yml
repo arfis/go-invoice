@@ -19,7 +19,9 @@ services:
       start_period: 30s
 
   invoice:
-    build: apps/invoice
+    build:
+      context: .
+      dockerfile: ./apps/invoice/Dockerfile
     depends_on:
       - db
     volumes:
@@ -41,7 +43,9 @@ services:
     restart: always
 
   authorization:
-    build: apps/authorization
+    build:
+      context: ./apps/authorization
+      dockerfile: Dockerfile
     depends_on:
       db:
         condition: service_healthy
@@ -59,7 +63,9 @@ services:
       DB_PASSWORD: password
 
   gateway:
-    build: apps/gateway
+    build:
+      context: .
+      dockerfile: ./apps/gateway/Dockerfile
     volumes:
       - ./apps/gateway:/app
     healthcheck:
@@ -77,7 +83,7 @@ services:
       - "5002:8081"
     environment:
       KAFKA_URL: "kafka:29092"
-      INVOICE_SERVICE_URL: "http://invoice:8080"
+      INVOICE_SERVICE_URL: "http://invoice:3001"
       AUTHORIZATION_SERVICE_URL: "http://authorization:8080"
       DB_HOST: db
       DB_PORT: 5432

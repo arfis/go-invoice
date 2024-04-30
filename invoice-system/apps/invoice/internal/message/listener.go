@@ -5,14 +5,16 @@ import (
 	"fmt"
 	"github.com/arfis/go-invoice/invoice/internal/commands"
 	"github.com/confluentinc/confluent-kafka-go/v2/kafka"
+	sharedCommands "lib/commands"
 	"log"
 	"os"
 	"time"
 )
 
 type CommandMessage struct {
-	Command string                 `json:"command"`
-	Data    map[string]interface{} `json:"data"`
+	Command     sharedCommands.Command     `json:"command"`
+	CommandStep sharedCommands.CommandStep `json:"commandStep"`
+	Data        map[string]interface{}     `json:"data"`
 }
 
 func StartListening() {
@@ -56,14 +58,14 @@ func StartListening() {
 
 		if err == nil {
 			switch cmdMsg.Command {
-			case "PrintPDF":
+			case sharedCommands.CreatePDF:
 				{
 					invoiceId := cmdMsg.Data["InvoiceId"].(string)
 					pdfPrinter := commands.PrintPdf{InvoiceId: invoiceId}
 					pdfPrinter.Execute()
 				}
 
-			case "Send":
+			case sharedCommands.SendInvoice:
 				{
 					invoiceId := cmdMsg.Data["InvoiceId"].(string)
 					mailTo := cmdMsg.Data["MailTo"].(string)

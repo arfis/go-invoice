@@ -2,23 +2,35 @@ FROM golang:1.22 as builder
 
 WORKDIR /app
 
-COPY . .
+# Copy necessary files
+COPY ./apps/invoice /app
+COPY ./commands /commands
 
+# Modify go.mod for Docker environment paths
+RUN sed -i 's|example.com/commands => ../../commands|example.com/commands => /commands|g' go.mod
+
+# Install dependencies
 RUN go mod download
-RUN go install github.com/cosmtrek/air@latest
-RUN ls /go/bin  # This will output the contents of /go/bin to the Docker build logs
 
-RUN go build -o ./tmp/main ./cmd/main/main.go
+# Install Air for live reloading
+RUN go install github.com/cosmtrek/air@latest
+RUN ls /go/bin  # List contents to verify air installation
+
+# Build your Go application
+RUN go build -o /app/main ./cmd/main/main.go
 
 FROM golang:1.22
 
 WORKDIR /app
 
-COPY --from=builder /app/tmp/main ./tmp/main
+# Copy the compiled main application
+COPY --from=builder /app/main /app/main
+
+# Try copying air from the builder stage
 COPY --from=builder /go/bin/air /usr/local/bin/air
 
-COPY script/wait-for-it.sh /usr/local/bin/wait-for-it.sh
-
+# Other setup...
+COPY ./apps/invoice/script/wait-for-it.sh /usr/local/bin/wait-for-it.sh
 RUN chmod +x /usr/local/bin/wait-for-it.sh
 RUN chmod +x /usr/local/bin/air
 

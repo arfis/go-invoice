@@ -59,6 +59,6 @@ func main() {
 	//}
 }
 
-func Startup(server server.StartupHandler, port uint) {
-	server.StartWebServer(port, terminateChan)
+func Startup(startupServer server.StartupHandler, port uint) {
+	startupServer.StartWebServer(port, terminateChan)
 }

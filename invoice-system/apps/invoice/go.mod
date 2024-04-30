@@ -8,8 +8,8 @@ require (
 )
 
 require (
-	github.com/confluentinc/confluent-kafka-go/v2 v2.3.0 // indirect
-	github.com/google/uuid v1.6.0 // indirect
+	github.com/confluentinc/confluent-kafka-go/v2 v2.3.0
+	github.com/google/uuid v1.6.0
 	github.com/jackc/pgpassfile v1.0.0 // indirect
 	github.com/jackc/pgservicefile v0.0.0-20231201235250-de7065d80cb9 // indirect
 	github.com/jackc/pgx/v5 v5.5.5 // indirect
@@ -20,4 +20,7 @@ require (
 	golang.org/x/crypto v0.22.0 // indirect
 	golang.org/x/sync v0.7.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
+	lib/commands v0.0.0
 )
+
+replace lib/commands => ../../commands

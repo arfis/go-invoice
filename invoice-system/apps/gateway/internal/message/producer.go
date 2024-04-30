@@ -80,7 +80,7 @@ func (producer *Producer) SendOperation(command CommandMessage) {
 func (producer *Producer) GenerateOperations() {
 	messageQueue := CommandMessage{}
 	commands := []CommandMessage{
-		messageQueue.PrintPdf("2"),
+		messageQueue.CreatePdf("2"),
 		messageQueue.Send("3", "michalsevcikk@gmail.com"),
 		messageQueue.Send("5", "michalsevcikk@gmail.com"),
 	}
